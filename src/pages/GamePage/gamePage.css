@@ -1,0 +1,109 @@
+.game-page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.back-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+    background-image: linear-gradient(to top, #e12e00 0, #fd6200 100%);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 1rem;
+    color: #fff;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.back-btn:hover {
+    cursor: pointer;
+    background-size: 100% 400%;
+    text-decoration: none;
+    transition: .3s;
+}
+.back-btn:active {
+    transform: scale(0.9);
+    transition: .3s;
+}
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    position: absolute;
+    top: 2rem;
+    cursor: pointer;
+}
+
+.textBottomSection {
+    position: absolute;
+    bottom: 2.5em;
+    width: 100%;
+    text-align: center;
+}
+
+.winnerMove {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.restartButton {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #de2414 0%, #fc611d 100%);
+    background-size: 100% 100%;
+    transition: all 0.3s;
+}
+
+.restartButton:hover {
+    outline: none;
+    border: none;
+    background-size: 100% 400%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.restartButton:active {
+    transform: scale(0.9);
+    transition: all 0.3s;
+}
+
+.restartButton:focus, .restartButton:active, .restartButton:target{
+    outline: none;
+    border: none;
+}
+
+
+@media (max-width: 600px) {
+    .back-btn {
+        top: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .title {
+        font-size: 1.5rem;
+        top: 1rem;
+    }
+
+    .textBottomSection {
+    bottom: 4.125em;
+        
+    }
+
+    .winnerMove {
+        font-size: 1em;
+    }
+    .restartButton {
+        font-size: 1em;
+    }
+}
