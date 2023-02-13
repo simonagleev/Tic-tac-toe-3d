@@ -2,10 +2,10 @@ import React, { useLayoutEffect, useRef } from 'react';
 import * as THREE from "three";
 
 const WinnerLine = ({ positions, positionIndices }) => {
-    const ref = useRef();
+    const ref = useRef()
 
-    const startPos = positions[positionIndices[0]];
-    const endPos = positions[positionIndices[2]];
+    const startPos = positions[positionIndices[0]]
+    const endPos = positions[positionIndices[2]]
 
     useLayoutEffect(() => {
         ref.current.geometry.setFromPoints([startPos, endPos].map((point) => new THREE.Vector3(...point)))
@@ -19,4 +19,4 @@ const WinnerLine = ({ positions, positionIndices }) => {
     )
 }
 
-export default React.memo(WinnerLine);
+export default React.memo(WinnerLine)

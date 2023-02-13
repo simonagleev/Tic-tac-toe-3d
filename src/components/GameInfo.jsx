@@ -30,7 +30,7 @@ const GameInfo = ({ gameBoard, nextTurn, winner, resetGameBoard }) => {
                 </div>
             </div>
         </>
-    );
+    )
 }
 
-export default React.memo(GameInfo);
+export default React.memo(GameInfo)

@@ -27,4 +27,4 @@ const GridBox = ({ shape, position, handleClick }) => {
     );
 }
 
-export default React.memo(GridBox);
+export default React.memo(GridBox)

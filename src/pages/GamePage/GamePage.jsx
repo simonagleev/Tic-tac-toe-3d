@@ -1,5 +1,5 @@
 import './gamePage.css'
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, Preload, Loader } from "@react-three/drei";
 
@@ -95,7 +95,7 @@ const GamePage = () => {
             setGameBoard(botBoardCopy)
             setEmptyBoxes(botBoardCopy.filter(item => item === null))
             setNextTurn(prevNextTurn => !prevNextTurn)
-        }, 1000);
+        }, 1000)
 
     }
 
@@ -109,7 +109,7 @@ const GamePage = () => {
         width: '700px',
         height: '800px',
         backgrounColor: 'black',
-        opacity: .5, 
+        opacity: .5,
         color: 'red'
     }
 
@@ -134,26 +134,23 @@ const GamePage = () => {
                 />
 
                 {/* skybox*/}
-                {/* <Suspense fallback={null}> */}
-                    <Environment
-                        background
-                        files={[
-                            px,
-                            nx,
-                            py,
-                            ny,
-                            pz,
-                            nz,
-                        ]}
-                    />
-                {/* </Suspense> */}
+                <Environment
+                    background
+                    files={[
+                        px,
+                        nx,
+                        py,
+                        ny,
+                        pz,
+                        nz,
+                    ]}
+                />
 
                 {/* create grid */}
-                {/* <Suspense fallback={null}> */}
-                    <GridLine position={[1.3, 0, 0]} rotation={[0, 0, 0]} />
-                    <GridLine position={[-1.2, 0, 0]} rotation={[0, 0, 0]} />
-                    <GridLine position={[0, -1.2, 0]} rotation={[0, 0, Math.PI / 2]} />
-                    <GridLine position={[0, 1.2, 0]} rotation={[0, 0, Math.PI / 2]} />
+                <GridLine position={[1.3, 0, 0]} rotation={[0, 0, 0]} />
+                <GridLine position={[-1.2, 0, 0]} rotation={[0, 0, 0]} />
+                <GridLine position={[0, -1.2, 0]} rotation={[0, 0, Math.PI / 2]} />
+                <GridLine position={[0, 1.2, 0]} rotation={[0, 0, Math.PI / 2]} />
 
                 {positions.map((gridBox, idx) => {
                     return (
@@ -165,7 +162,6 @@ const GamePage = () => {
                         />
                     )
                 })}
-                {/* </Suspense> */}
 
                 {/* Render the winner */}
                 {winner ? <WinnerLine positions={positions} positionIndices={positionIndices} /> : null}
@@ -178,9 +174,8 @@ const GamePage = () => {
                 winner={winner}
                 resetGameBoard={resetGameBoard}
             />
-            {/* <Loader /> */}
         </div >
     )
 };
 
-export default React.memo(GamePage);
+export default React.memo(GamePage)

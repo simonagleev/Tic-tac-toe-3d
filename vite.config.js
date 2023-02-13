@@ -5,7 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: "**/*.hdr"
-  // assetsInclude(file) {
-  //   return /\.(hdr|glb|usdz|png)$/.test(file)
-  // }
 })

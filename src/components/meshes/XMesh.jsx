@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useState, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
 
@@ -10,13 +10,13 @@ const XMesh = ({ position }) => {
 
     useFrame(() => {
         if (ref.current) {
-            ref.current.rotation.y -= 0.01;
+            ref.current.rotation.y -= 0.01
         }
-    });
+    })
 
     useLayoutEffect(() => {
-        gsap.to(oneRef.current.scale, {duration: .3, x: 0.15, y:0.15, z:0.15});
-        gsap.to(twoRef.current.scale, {duration: .3, delay: 0.3, x: 0.15, y:0.15, z:0.15});
+        gsap.to(oneRef.current.scale, {duration: .3, x: 0.15, y:0.15, z:0.15})
+        gsap.to(twoRef.current.scale, {duration: .3, delay: 0.3, x: 0.15, y:0.15, z:0.15})
 
     }, [])
 
@@ -41,7 +41,7 @@ const XMesh = ({ position }) => {
                 </mesh>
             </group>
         </>
-    );
+    )
 }
 
-export default React.memo(XMesh);
+export default React.memo(XMesh)

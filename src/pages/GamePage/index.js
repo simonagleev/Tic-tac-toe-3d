@@ -1,2 +1,2 @@
 export * from './GamePage';
-export { default } from './GamePage'
+export { default } from './GamePage';

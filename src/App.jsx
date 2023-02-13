@@ -1,7 +1,7 @@
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import GamePage from './pages/GamePage'
-import HomePage from './pages/HomePage'
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import GamePage from './pages/GamePage';
+import HomePage from './pages/HomePage';
 
 const App = () => {
 

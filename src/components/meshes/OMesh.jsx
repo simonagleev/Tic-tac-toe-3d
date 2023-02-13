@@ -3,16 +3,16 @@ import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
 
 const OMesh = ({ position }) => {
-    const ref = useRef();
+    const ref = useRef()
 
     useFrame(() => {
         if (ref.current) {
-            ref.current.rotation.y += 0.03;
+            ref.current.rotation.y += 0.03
         }
-    });
+    })
 
     useLayoutEffect(() => {
-        gsap.to(ref.current.scale, {duration: .7, x: 0.1, y:0.1, z:0.1});
+        gsap.to(ref.current.scale, {duration: .7, x: 0.1, y:0.1, z:0.1})
     }, [])
 
     return (
@@ -29,4 +29,4 @@ const OMesh = ({ position }) => {
     );
 }
 
-export default React.memo(OMesh);
+export default React.memo(OMesh)
