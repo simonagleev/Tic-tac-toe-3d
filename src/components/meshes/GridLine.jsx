@@ -13,4 +13,4 @@ const GridLine = ({position, rotation}) => {
     )
 }
 
-export default React.memo(GridLine);
+export default React.memo(GridLine)
