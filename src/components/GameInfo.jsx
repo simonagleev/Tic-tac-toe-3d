@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const GameInfo = ({ gameBoard, nextTurn, winner, resetGameBoard }) => {
     return (
         <>
-            <Link to="/">
+            {/* <Link to="/">
                 <div className='back-btn'>
                     На главную
                 </div>
-            </Link>
+            </Link> */}
 
             <div className='title'>
                 Крестики-нолики
